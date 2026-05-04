@@ -28,12 +28,12 @@ directories/dch_directory={
 "You": "res://Characters/You/You.dch"
 }
 directories/dtl_directory={
-"ArrivedAtWork": "res://Timelines/ArrivedAtWork.dtl",
-"CarCrash": "res://Timelines/CarCrash.dtl",
-"GetToWork": "res://Timelines/GetToWork.dtl",
-"Intermission": "res://Timelines/Intermission.dtl",
-"Intro": "res://Timelines/Intro.dtl",
-"WakeUp": "res://Timelines/WakeUp.dtl"
+"ArrivedAtWork": "res://Timelines/Prelude/ArrivedAtWork.dtl",
+"CarCrash": "res://Timelines/Prelude/CarCrash.dtl",
+"GetToWork": "res://Timelines/Prelude/GetToWork.dtl",
+"Intermission": "res://Timelines/Prelude/Intermission.dtl",
+"Intro": "res://Timelines/Prelude/Intro.dtl",
+"WakeUp": "res://Timelines/Prelude/WakeUp.dtl"
 }
 layout/style_directory={
 "Main": "res://Styles/DialogueBox.tres"
