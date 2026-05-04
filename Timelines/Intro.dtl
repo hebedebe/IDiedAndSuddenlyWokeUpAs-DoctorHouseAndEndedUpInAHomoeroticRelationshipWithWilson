@@ -1,0 +1,15 @@
+[background arg="res://Backgrounds/road.png" fade="0.0"]
+You: What a lovely evening to walk down the middle of the road...
+...
+Truck: I smell you on road
+join Truck center
+Truck: I hit you now
+label TypeOk
+[text_input text="Type 'OK' to continue!" var="LastInput"]
+if {LastInput}.to_lower()  ==  "ok":
+	leave Truck
+	jump Intermission/
+else:
+	You must type 'OK' to continue
+	jump TypeOk
+[background fade="0.0"]

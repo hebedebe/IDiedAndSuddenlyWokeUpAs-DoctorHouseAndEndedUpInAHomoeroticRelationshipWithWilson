@@ -1,0 +1,22 @@
+[background arg="#000000ff" fade="1.0" wait="true"]
+[wait time="1.0"]
+[background arg="res://Backgrounds/HouseBedroom.jpg" fade="1.0" wait="true"]
+You: Woah....
+You: What happened...
+You: Where am I?
+label LookChoice
+- Look around the bedroom
+	You: I don't want to do that
+	jump LookChoice
+- Look in the bathroom
+	You: I'll check the bathroom... Maybe there's some Vicodin in there.
+	You: Wait, what? I've never taken Vicodin.
+	[background arg="res://Backgrounds/HouseBathroom.jpg" fade="1.0" wait="true"]
+	You: I don't recognise this place
+	- Check the mirror
+		[background arg="res://Backgrounds/MirrorEmpty.jpg" fade="0.5" wait="true"]
+		[background arg="res://Backgrounds/MirrorHouse.jpg" fade="1.0" wait="true"]
+		You: Oh my god
+		You: I'm...
+		DrHouse: Dr Gregory House, Champion of The Medical Field
+		DrHouse: And I.. have taken Vicodin!

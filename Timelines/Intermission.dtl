@@ -1,0 +1,6 @@
+And now, a brief intermission.
+[background arg="res://Backgrounds/Intermission.jpg" fade="1.0" transition="Swipe Diagonal Up Left"]
+audio music "res://Audio/Music/ElevatorMusic.mp3"
+[wait time="15.06"]
+Intermission over.
+jump WakeUp/
