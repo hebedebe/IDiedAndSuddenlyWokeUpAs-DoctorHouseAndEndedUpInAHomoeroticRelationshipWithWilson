@@ -12,4 +12,3 @@ if {LastInput}.to_lower()  ==  "ok":
 else:
 	You must type 'OK' to continue
 	jump TypeOk
-[background fade="0.0"]

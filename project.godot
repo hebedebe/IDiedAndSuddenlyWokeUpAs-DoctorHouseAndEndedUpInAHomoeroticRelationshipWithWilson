@@ -21,15 +21,19 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"DrHouse": "res://Backgrounds/DrHouse.dch",
+"DrHouse": "res://Characters/You/DrHouse.dch",
+"Passerby": "res://Characters/Passerby/Passerby.dch",
 "Truck": "res://Characters/Truck/Truck.dch",
 "Wilson": "res://Characters/Wilson/Wilson.dch",
 "You": "res://Characters/You/You.dch"
 }
 directories/dtl_directory={
+"ArrivedAtWork": "res://Timelines/ArrivedAtWork.dtl",
+"CarCrash": "res://Timelines/CarCrash.dtl",
+"GetToWork": "res://Timelines/GetToWork.dtl",
 "Intermission": "res://Timelines/Intermission.dtl",
 "Intro": "res://Timelines/Intro.dtl",
-"WakeUp": "res://Backgrounds/WakeUp.dtl"
+"WakeUp": "res://Timelines/WakeUp.dtl"
 }
 layout/style_directory={
 "Main": "res://Styles/DialogueBox.tres"
@@ -73,6 +77,12 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [editor_plugins]
 

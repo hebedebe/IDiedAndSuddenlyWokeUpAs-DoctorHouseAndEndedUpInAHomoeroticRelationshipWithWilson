@@ -20,3 +20,8 @@ label LookChoice
 		You: I'm...
 		DrHouse: Dr Gregory House, Champion of The Medical Field
 		DrHouse: And I.. have taken Vicodin!
+[background arg="res://Backgrounds/HouseBedroom.jpg" fade="0.0"]
+DrHouse: This is insane! How did this even happen?
+DrHouse: Wait...
+DrHouse: That truck! It hit me and then... everything went lupus.
+jump GetToWork/

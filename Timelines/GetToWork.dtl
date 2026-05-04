@@ -1,0 +1,13 @@
+DrHouse: Oh god it's already 10am! I need to get to the hospital so i can prescribe mouse bites!
+[background arg="res://Backgrounds/driving.jpeg" fade="0.0"]
+DrHouse: do dodoo
+DrHouse: driving my car
+DrHouse: to the hospital
+DrHouse: doctor
+DrHouse: OH MY GOD THERE'S SOMEONE ON THE ROAD
+- Hit them
+	DrHouse: AHHHHHHHHHHH
+	jump CarCrash/
+- Swerve
+	DrHouse: Haha ok cool that was pretty easy to avoid
+	jump ArrivedAtWork/
