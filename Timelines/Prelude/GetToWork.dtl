@@ -7,6 +7,8 @@ DrHouse: doctor
 DrHouse: OH MY GOD THERE'S SOMEONE ON THE ROAD
 - Hit them
 	DrHouse: AHHHHHHHHHHH
+	do FightCreator.create_fight("uid://dfv7mhtq8wj1y")
+	[end_timeline]
 	jump CarCrash/
 - Swerve
 	DrHouse: Haha ok cool that was pretty easy to avoid

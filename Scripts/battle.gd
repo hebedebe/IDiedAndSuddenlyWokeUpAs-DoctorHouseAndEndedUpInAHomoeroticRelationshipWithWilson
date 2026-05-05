@@ -1,4 +1,4 @@
-extends Control
+class_name Battle extends Control
 
 const Actions = EventQueue.Actions
 

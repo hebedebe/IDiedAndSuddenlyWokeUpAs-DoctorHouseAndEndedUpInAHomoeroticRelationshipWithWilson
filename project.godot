@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 Globals="*uid://pu40x5jax3et"
 Data="*uid://bvws2db6wg6l3"
+FightCreator="*uid://ddmw6qteosbtc"
 
 [dialogic]
 
