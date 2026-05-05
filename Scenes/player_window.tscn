@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://d1ogftpv4kius"]
+
+[ext_resource type="Theme" uid="uid://cy04k2oxrndt3" path="res://Styles/DefaultTheme.tres" id="1_xvsdi"]
+[ext_resource type="Script" uid="uid://dr1qlobptkdya" path="res://Scripts/player_window.gd" id="1_ynt5b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynt5b"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="PlayerWindow" type="Button" unique_id=399415861]
+custom_minimum_size = Vector2(124, 100)
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 129.0
+offset_bottom = 105.0
+theme = ExtResource("1_xvsdi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynt5b")
+script = ExtResource("1_ynt5b")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1163943681]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xvsdi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=643395983]
+layout_mode = 2
+
+[node name="PlayerName" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1001315556]
+layout_mode = 2
+text = "Player Name"
+
+[node name="HP" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=14870096]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HP" unique_id=586370142]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "HP:"
+
+[node name="Value" type="Label" parent="PanelContainer/VBoxContainer/HP" unique_id=24597944]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "???"
+
+[node name="MP" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=433508814]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MP" unique_id=1642499598]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "MP:"
+
+[node name="Value" type="Label" parent="PanelContainer/VBoxContainer/MP" unique_id=665971687]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "???"

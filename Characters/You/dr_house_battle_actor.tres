@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://ec7atd6oq3qb"]
+
+[ext_resource type="Script" uid="uid://l61kjbbg8jpw" path="res://Scripts/battle_actor.gd" id="1_5bdff"]
+
+[resource]
+script = ExtResource("1_5bdff")
+name = "Dr House"
+hp_max = 10
+mp_max = 10
+metadata/_custom_type_script = "uid://l61kjbbg8jpw"

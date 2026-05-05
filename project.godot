@@ -11,12 +11,15 @@ config_version=5
 [application]
 
 config/name="IDiedAndSuddenlyWokeUpAsDoctorHouseAndEndedUpInAHomoeroticRelationshipWithWilson"
+run/main_scene="uid://csnniqybdbf8v"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Globals="*uid://pu40x5jax3et"
+Data="*uid://bvws2db6wg6l3"
 
 [dialogic]
 
@@ -87,6 +90,10 @@ translation/add_separator=false
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://cy04k2oxrndt3"
 
 [input]
 

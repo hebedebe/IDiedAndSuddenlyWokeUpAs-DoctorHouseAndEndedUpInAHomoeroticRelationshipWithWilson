@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://csnniqybdbf8v"]
+
+[ext_resource type="Shader" uid="uid://dggblgwt7q0t4" path="res://Shaders/battle_background.gdshader" id="1_1ruyk"]
+[ext_resource type="Script" uid="uid://dexgmloimqe87" path="res://Scripts/battle.gd" id="1_pd5xk"]
+[ext_resource type="Theme" uid="uid://cy04k2oxrndt3" path="res://Styles/DefaultTheme.tres" id="2_oxf17"]
+[ext_resource type="Script" uid="uid://ddl282evviiea" path="res://Scripts/event_queue.gd" id="2_ww2ai"]
+[ext_resource type="Script" uid="uid://bkdj87yoki8h2" path="res://Utility/menu.gd" id="3_1otgo"]
+[ext_resource type="PackedScene" uid="uid://bri874wr72mvj" path="res://Scenes/enemy.tscn" id="4_f6xt6"]
+[ext_resource type="Resource" uid="uid://dfv7mhtq8wj1y" path="res://Characters/Act1/ManInRoad/man_in_road_battle_actor.tres" id="6_lrv64"]
+[ext_resource type="PackedScene" uid="uid://bswybaw8jo85o" path="res://Scenes/player_windows.tscn" id="7_lrv64"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ruyk"]
+shader = ExtResource("1_1ruyk")
+shader_parameter/fireMovement = Vector2(-0.01, -0.1)
+shader_parameter/distortionMovement = Vector2(-0.01, -0.3)
+shader_parameter/normalStrength = 40.0
+shader_parameter/distortionStrength = 0.05
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1ruyk"]
+
+[node name="Battle" type="Control" unique_id=1528705721]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pd5xk")
+
+[node name="EventQueue" type="Node" parent="." unique_id=1460388371]
+script = ExtResource("2_ww2ai")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1727210780]
+modulate = Color(0.50534403, 0.5053441, 0.50534403, 1)
+material = SubResource("ShaderMaterial_1ruyk")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = SubResource("PlaceholderTexture2D_1ruyk")
+
+[node name="Enemies" type="HBoxContainer" parent="." unique_id=238520701 node_paths=PackedStringArray("buttons_container")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -122.5
+offset_right = 100.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_1otgo")
+buttons_container = NodePath(".")
+
+[node name="Enemy" parent="Enemies" unique_id=525909622 instance=ExtResource("4_f6xt6")]
+layout_mode = 2
+data = ExtResource("6_lrv64")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1715193195]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Options" type="PanelContainer" parent="MarginContainer" unique_id=1318835866 node_paths=PackedStringArray("buttons_container")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_oxf17")
+script = ExtResource("3_1otgo")
+buttons_container = NodePath("VBoxContainer")
+focus_on_ready = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Options" unique_id=479591614]
+layout_mode = 2
+
+[node name="Fight" type="Button" parent="MarginContainer/Options/VBoxContainer" unique_id=1511666412]
+custom_minimum_size = Vector2(96, 40.13)
+layout_mode = 2
+theme = ExtResource("2_oxf17")
+text = "Fight"
+flat = true
+
+[node name="Items" type="Button" parent="MarginContainer/Options/VBoxContainer" unique_id=748050223]
+custom_minimum_size = Vector2(96, 40.13)
+layout_mode = 2
+theme = ExtResource("2_oxf17")
+text = "Items"
+flat = true
+
+[node name="Malpractice" type="Button" parent="MarginContainer/Options/VBoxContainer" unique_id=378774107]
+custom_minimum_size = Vector2(96, 40.13)
+layout_mode = 2
+theme = ExtResource("2_oxf17")
+text = "Malpractice"
+flat = true
+
+[node name="Flee" type="Button" parent="MarginContainer/Options/VBoxContainer" unique_id=392317825]
+custom_minimum_size = Vector2(96, 40.13)
+layout_mode = 2
+theme = ExtResource("2_oxf17")
+text = "Flee"
+flat = true
+
+[node name="PlayerWindows" parent="MarginContainer" unique_id=1526084384 instance=ExtResource("7_lrv64")]
+layout_mode = 2
+size_flags_vertical = 8
+
+[connection signal="button_pressed" from="Enemies" to="." method="_on_enemies_button_pressed"]
+[connection signal="button_pressed" from="MarginContainer/Options" to="." method="_on_options_button_pressed"]
