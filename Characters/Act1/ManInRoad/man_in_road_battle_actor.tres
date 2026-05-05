@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://dfv7mhtq8wj1y"]
 
-[ext_resource type="Script" uid="uid://l61kjbbg8jpw" path="res://Scripts/battle_actor.gd" id="1_egqn3"]
+[ext_resource type="Script" uid="uid://l61kjbbg8jpw" path="res://Scripts/battle_actor.gd" id="1_vofkt"]
 
 [resource]
-script = ExtResource("1_egqn3")
-name = "Man in road"
-hp_max = 5
+script = ExtResource("1_vofkt")
+name = "Innocent civilian"
 mp_max = 0
 metadata/_custom_type_script = "uid://l61kjbbg8jpw"

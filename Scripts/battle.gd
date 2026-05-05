@@ -11,7 +11,8 @@ var current_player_index: int = 0
 @onready var player_windows: PlayerWindows = $MarginContainer/PlayerWindows
 
 func _ready() -> void:
-	goto_next_player()
+	options.button_focus()
+	#goto_next_player()
 
 func goto_next_player(dir: int = 1) -> void:
 	current_player_index += dir
